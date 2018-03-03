@@ -1,0 +1,6 @@
+vi:
+  sidebar:
+    welcome: "Xin chào"
+    general: "Chung"
+    master_data:
+      title: "Dữ liệu"

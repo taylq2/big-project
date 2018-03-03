@@ -1,0 +1,6 @@
+en:
+  sidebar:
+    welcome: "Welcome"
+    general: "General"
+    master_data:
+      title: "Master Data"

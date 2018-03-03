@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303135241) do
+ActiveRecord::Schema.define(version: 20180303172835) do
 
   create_table "area_products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "area_id"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20180303135241) do
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
   end
 
 end
