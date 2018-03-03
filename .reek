@@ -4,3 +4,8 @@ IrresponsibleModule:
 exclude_paths:
   - 'vendor'
   - 'db/migrate'
+
+FeatureEnvy:
+  exclude:
+    - "ApplicationHelper#full_title"
+

@@ -1,0 +1,12 @@
+vi:
+  app_name: "Đại học FPT-Hòa Lạc"
+  application:
+    language:
+      en: "Tiếng Anh"
+      vi: "Tiếng Việt"
+  layouts:
+    top_nav:
+      profile: "Hồ sơ"
+      log_out: "Đăng xuất"
+    footer:
+      content: "© 2017 By Framgia - Human Development Division - Education Section - Đăng ký bản quyền."

@@ -10,5 +10,13 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap_gem
+ *= require font_awesome_gem
+ *= require icheck
+ *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+ *= require pnotify
+ *= require fullcalendar
+ *= require ./gentelella.min
+ *= require ./custom
  *= require_self
  */
