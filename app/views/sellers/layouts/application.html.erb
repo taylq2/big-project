@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= full_title yield :title %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "sellers/application", media: "all" %>
+    <%= javascript_include_tag "sellers/application" %>
+    <script>
+      I18n.locale = '<%= I18n.locale %>';
+    </script>
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="flash-errors">
+        <%= render "sellers/shareds/flash_errors" %>
+      </div>
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <%= render "sellers/layouts/sidebar" %>
+        </div>
+        <div class="top_nav">
+          <%= render "sellers/layouts/top_nav" %>
+        </div>
+        <div class="right_col" role="main">
+          <%= yield %>
+        </div>
+        <%= render "sellers/layouts/footer" %>
+      </div>
+    </div>
+  </body>
+</html>

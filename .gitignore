@@ -23,3 +23,14 @@ config/secrets.yml
 # Framgia-CI
 .framgia-ci-reports
 .framgia-ci-result.temp.yml
+
+public/assets/
+public/uploads/*
+test/
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+.idea/
+public/javascripts/i18n.js
+app/assets/javascripts/i18n/translations.js

@@ -11,4 +11,21 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+//= require i18n
+//= require i18n/translations
+//= require jquery
+//= require bootstrap-sprockets
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require icheck
+//= require moment
+//= require fullcalendar
+//= require pnotify
+//= require jquery.smartWizard
+//= require bootstrap-datetimepicker
+//= require ./gentelella-custom
+
+$(document).ready(function() {
+  init_DataTables();
+  init_sidebar();
+});

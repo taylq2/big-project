@@ -1,0 +1,48 @@
+<div class="left_col scroll-view">
+  <div class="navbar nav_title">
+    <%= link_to sellers_root_path, class: "site_title" do %>
+      <%= image_tag "img.jpg", class: "logo-sidenav" %>
+      <span><%= t "app_name" %></span>
+    <% end %>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <div class="profile clearfix">
+    <div class="profile_pic">
+      <%= image_tag "img.jpg", class: "img-circle profile_img" %>
+    </div>
+    <div class="profile_info">
+      <span>
+        <%= t "sidebar.welcome" %>, <h2>current_user.name </h2>
+      </span>
+    </div>
+  </div>
+
+  <br />
+
+  <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+      <h3><%= t "sidebar.general" %></h3>
+      <ul class="nav side-menu">
+        <li>
+          <%= link_to "javascript:;" do %>
+            <i class="fa fa-database"></i>
+            <%= t "sidebar.master_data.title" %>
+            <span class="fa fa-chevron-down"></span>
+          <% end %>
+          <ul class="nav child_menu">
+            <li>
+              <%= link_to t("sellers.sidebar.master_data.courses"),
+                "#" %>
+            </li>
+            <li>
+              <%= link_to t("sellers.sidebar.master_data.subjects"),
+                "#" %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
