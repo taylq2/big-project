@@ -4,7 +4,9 @@
     "jquery": true
   },
   "globals": {
-    "window": true
+    "window": true,
+    "PNotify": true,
+    "I18n": true
   },
 
   "extends": "eslint:recommended",

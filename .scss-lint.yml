@@ -3,6 +3,7 @@ exclude:
   - 'app/assets/stylesheets/application.css'
   - 'app/assets/stylesheets/sellers/application.css'
   - 'app/assets/stylesheets/sellers/gentelella.min.css'
+  - 'app/assets/stylesheets/login_page.scss'
   - 'vendor/assets/**'
 linters:
   Comment:

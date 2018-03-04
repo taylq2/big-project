@@ -24,6 +24,7 @@
 //= require jquery.smartWizard
 //= require bootstrap-datetimepicker
 //= require ./gentelella-custom
+//= require custom
 
 $(document).ready(function() {
   init_DataTables();

@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :password
       t.integer :area_id
       t.integer :room
-      t.string :type
+      t.string :type, default: "Buyer"
 
       t.timestamps
     end
