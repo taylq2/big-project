@@ -8,4 +8,4 @@ exclude_paths:
 FeatureEnvy:
   exclude:
     - "ApplicationHelper#full_title"
-
+    - "User#root_path"

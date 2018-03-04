@@ -10,3 +10,16 @@ vi:
       log_out: "Đăng xuất"
     footer:
       content: "© 2017 By Framgia - Human Development Division - Education Section - Đăng ký bản quyền."
+  session:
+    email: "Email"
+    password: "Mật khẩu"
+    login: "Đăng nhập"
+    logout: "Đăng xuất"
+    remember: "Ghi nhớ"
+    sign_in_fail: "Đăng nhập thất bại"
+    sign_in_success: "Đăng nhập thành công"
+    room: "Phòng"
+    signup: "Đăng ký"
+    name: "Tên"
+    password_confirmation: "Nhập lại mật khẩu"
+    select_area: "Chọn DOM"

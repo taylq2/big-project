@@ -10,7 +10,7 @@
       <li>
         <%= link_to "javascript:;", class: "user-profile dropdown-toggle",
           data: {toggle: "dropdown"}, "aria-expanded": false do %>
-          <%= image_tag "img.jpg" %>  current_user.name
+          <%= image_tag "img.jpg" %> <%= current_user.name %>
           <span class=" fa fa-angle-down"></span>
         <% end %>
         <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -18,7 +18,7 @@
             <%= link_to t("layouts.top_nav.profile"), "javascript:;" %>
           </li>
           <li>
-            <%= link_to "#", method: :delete do %>
+            <%= link_to destroy_user_session_path, method: :delete do %>
               <i class="fa fa-sign-out pull-right"></i>
               <%= t "layouts.top_nav.log_out" %>
             <% end %>

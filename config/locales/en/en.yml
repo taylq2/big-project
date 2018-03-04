@@ -10,3 +10,17 @@ en:
       log_out: "Log out"
     footer:
       content: "© 2017 By Framgia - Human Development Division - Education Section - All rights reserved."
+  session:
+    email: "Email"
+    password: "Password"
+    login: "Login"
+    logout: "Logout"
+    remember: "Remember me"
+    sign_in_fail: "Login error"
+    sign_in_success: "Login successfully"
+    room: "Room"
+    signup: "Signup"
+    name: "Name"
+    password_confirmation: "Password confirmation"
+    select_area: "Select area"
+    forgot_password: "Forgot your password?"

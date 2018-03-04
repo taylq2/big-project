@@ -1,0 +1,19 @@
+vi:
+  activerecord:
+    models:
+      user:
+        one: "người dùng"
+        others: "người dùng"
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        room: "Phòng"
+        password: "Mật khẩu"
+        password_confirmation: "Nhập lại mật khẩu"
+        area_id: "DOM"
+        type: "Loại tài khoản"
+  users:
+    messages:
+      create_success: "Tạo mới người dùng thành công"
+      create_fail: "Không thể tạo mới người dùng"
