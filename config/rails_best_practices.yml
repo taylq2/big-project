@@ -25,7 +25,9 @@ RemoveEmptyHelpersCheck: { }
 RemoveTrailingWhitespaceCheck: { }
 RemoveUnusedMethodsInControllersCheck: { except_methods:
   [
-    "Sellers::DashboardController#index"
+    "Sellers::DashboardController#index",
+    "UsersController#create",
+    "SessionsController#create"
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }

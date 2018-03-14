@@ -1,0 +1,19 @@
+vi:
+  activerecord:
+    models:
+      user:
+        one: "user"
+        others: "users"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        room: "Room"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        area_id: "Area"
+        type: "Type"
+  users:
+    messages:
+      create_success: "Tạo mới người dùng thành công"
+      create_fail: "Signup fail"
