@@ -29,6 +29,8 @@ gem "fullcalendar-rails"
 gem "font-awesome-sass", "~> 4.7.0"
 gem "bootstrap3-datetimepicker-rails", "~> 4.17.47"
 gem "icheck-rails"
+gem "select2-rails"
+gem "mini_magick"
 
 group :development, :test do
   gem "rspec"
@@ -44,6 +46,7 @@ group :development, :test do
   gem "rubocop", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "eslint-rails", git: "https://github.com/octoberstorm/eslint-rails", require: false
+  gem "scss_lint", require: false
   gem "scss_lint_reporter_checkstyle", require: false
   gem "rails_best_practices"
   gem "reek"

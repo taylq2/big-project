@@ -1,0 +1,8 @@
+vi:
+  sellers:
+    products:
+      index:
+        title: "Sản phẩm"
+        new_product: "Thêm mới sản phẩm"
+      new:
+        title: "Thêm mới sản phẩm"
