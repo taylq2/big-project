@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    models:
+      product:
+        one: "product"
+        other: "products"
+    attributes:
+      product:
+        picture: "Picture"
+        name: "Name"
+        price: "Price"
+        started_at: "Start at"
+        finished_at: "Finish at"

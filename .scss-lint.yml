@@ -5,6 +5,8 @@ exclude:
   - 'app/assets/stylesheets/sellers/gentelella.min.css'
   - 'app/assets/stylesheets/login_page.scss'
   - 'vendor/assets/**'
+  - 'app/assets/stylesheets/sellers/custom.scss'
+  - 'app/assets/stylesheets/sellers/product.scss'
 linters:
   Comment:
     exclude:

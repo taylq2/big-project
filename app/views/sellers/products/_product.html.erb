@@ -1,0 +1,19 @@
+<tr>
+  <td class="text-right"><%= product_counter + 1 %></td>
+  <td>
+    <%= link_to sellers_product_path(product) do %>
+      <%= image_tag product.picture.url if product.picture? %>
+    <% end %>
+  </td>
+  <td><%= link_to product.name, sellers_product_path(product) %></td>
+  <td><%= number_to_currency product.price %></td>
+  <td>
+    <%= l product.started_at %>
+  </td>
+  <td>
+    <%= l product.finished_at %>
+  </td>
+  <td>
+    <%= product.category.name %>
+  </td>
+</tr>

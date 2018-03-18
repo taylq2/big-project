@@ -24,9 +24,12 @@
 //= require jquery.smartWizard
 //= require bootstrap-datetimepicker
 //= require ./gentelella-custom
+//= require select2
 //= require custom
+//= require ./product
 
 $(document).ready(function() {
   init_DataTables();
   init_sidebar();
+  $('.select2').select2();
 });

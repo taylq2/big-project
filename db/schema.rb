@@ -61,8 +61,8 @@ ActiveRecord::Schema.define(version: 20180303220817) do
     t.integer "seller_id"
     t.decimal "price", precision: 10
     t.integer "category_id"
-    t.datetime "started_at"
-    t.datetime "finished_at"
+    t.time "started_at"
+    t.time "finished_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     devise_for :users, controllers: { sessions: 'sessions', registrations: "users" }
     namespace :sellers do
       root "dashboard#index"
+      resources :products, only: [:index, :show, :new, :create]
     end
   end
 end

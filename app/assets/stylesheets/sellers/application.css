@@ -18,5 +18,8 @@
  *= require fullcalendar
  *= require ./gentelella.min
  *= require ./custom
+ *= require ./product
+ *= require select2
+ *= require common
  *= require_self
  */

@@ -1,0 +1,73 @@
+<%= form_for [:sellers, product] do |f| %>
+  <%= render "sellers/shareds/error_messages", object: f.object %>
+
+  <%= f.hidden_field :seller_id, value: current_user.id %>
+
+  <div class="avatar-upload">
+    <div class="avatar-edit">
+      <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png", id: "imageUpload" %>
+      <label for="imageUpload"></label>
+    </div>
+    <% if f.object.picture? %>
+      <%= image_tag f.object.picture.thumb.url %>
+    <% else %>
+      <div class="avatar-preview">
+        <div id="imagePreview" style="background-image: url(https://www.retailnews.asia/wp-content/uploads/2017/07/Ksubaka-Pasta.jpg);">
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="form-group col-sm-12">
+    <%= f.label :name, class: "require" %>
+    <%= f.text_field :name, class: "form-control", required: true %>
+  </div>
+
+  <div class="form-group col-sm-12">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group col-sm-12">
+    <%= f.label :price, class: "require" %>
+    <%= f.number_field :price, class: "form-control", required: true %>
+  </div>
+
+  <div class="form-group col-sm-12">
+    <%= f.label :category_id, class: "require" %>
+    <%= f.select :category_id, categories,
+      {prompt: t(".select_category")}, class: "select2", required: true %>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <%= f.label :started_at, class: "require" %>
+    <div class="input-group date datetimepicker" id="datetimepicker1">
+      <%= f.text_field :started_at, class: "form-control input-group-addon",
+        required: true %>
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <%= f.label :finished_at, class: "require" %>
+    <div class="input-group date datetimepicker" id="datetimepicker2">
+      <%= f.text_field :finished_at, class: "form-control input-group-addon",
+        required: true %>
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
+  </div>
+
+  <div class="ln_solid col-sm-12"></div>
+
+  <div class="form-group">
+    <div class="col-md-7 col-sm-7 col-xs-12 col-md-offset-5">
+      <%= link_to t("buttons.cancel"), "#",
+        class: "btn btn-default" %>
+      <%= f.submit t("buttons.save"), class: "btn btn-success" %>
+    </div>
+  </div>
+<% end %>
