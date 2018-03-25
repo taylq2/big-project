@@ -18,8 +18,8 @@ ActiveRecord::Base.transaction do
   end
 
   Area.all.each do |area|
-    users << Buyer.new(name: "Buyer #{area}", password: "123456", area_id: area.id,
-      room: 507, email: "buyer#{area}@framgia.com")
+    users << Buyer.new(name: "Buyer #{area.id}", password: "123456", area_id: area.id,
+      room: 507, email: "buyer#{area.id}@framgia.com")
   end
   users.each do |user|
     user.confirm

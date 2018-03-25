@@ -30,7 +30,8 @@ RemoveUnusedMethodsInControllersCheck: { except_methods:
     "SessionsController#create",
     "Sellers::ProductsController#index",
     "Sellers::ProductsController#show",
-    "Sellers::ProductsController#create"
+    "Sellers::ProductsController#create",
+    "PagesController#show"
   ]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
