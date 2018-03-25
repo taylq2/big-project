@@ -19,7 +19,6 @@ class User < ApplicationRecord
     routes = Rails.application.routes.url_helpers
     return routes.managers_root_path if is_a?(Manager)
     return routes.sellers_root_path if is_a?(Seller)
-    return routes.buyers_root_path if is_a?(Buyer)
     routes.root_path
   end
 
