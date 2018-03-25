@@ -1,0 +1,46 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Dynamic Render Path",
+      "warning_code": 15,
+      "fingerprint": "5a128e42f602f9e65f719a41f30b81ce9fe3e3fa2f3677fd50be8940bfdab0dd",
+      "check_name": "Render",
+      "message": "Render path contains parameter value",
+      "file": "app/controllers/pages_controller.rb",
+      "line": 4,
+      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(action => \"pages/#{params[:page]}\", {})",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "PagesController",
+        "method": "show"
+      },
+      "user_input": "params[:page]",
+      "confidence": "Medium",
+      "note": ""
+    },
+    {
+      "warning_type": "File Access",
+      "warning_code": 16,
+      "fingerprint": "bdb92e0a2793b0ab5f00a85de2a63c4c97962e38e064f86c2ce0ae90a9d232c3",
+      "check_name": "FileAccess",
+      "message": "Parameter value used in file name",
+      "file": "app/controllers/pages_controller.rb",
+      "line": 14,
+      "link": "https://brakemanscanner.org/docs/warning_types/file_access/",
+      "code": "Pathname.new((Rails.root + \"app/views/pages/#{params[:page]}.html.erb\"))",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "PagesController",
+        "method": "valid_page?"
+      },
+      "user_input": "params[:page]",
+      "confidence": "High",
+      "note": ""
+    }
+  ],
+  "updated": "2018-03-25 17:03:01 +0700",
+  "brakeman_version": "4.2.0"
+}

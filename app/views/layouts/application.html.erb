@@ -4,11 +4,25 @@
     <title><%= full_title yield :title %></title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= stylesheet_link_tag    "application", media: "all",
+      "data-turbolinks-track": "reload" %>
+
+    <%= javascript_include_tag "application",
+      "data-turbolinks-track": "reload" %>
+
+    <%= yield :head %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= yield :class %>" data-features="<%= yield :features %>">
+    <div class="flash-errors">
+      <%= render "sellers/shareds/flash_errors" %>
+    </div>
+    <%= render"layouts/top_nav" %>
+    <div class="wrapper">
+      <%= yield %>
+      <%= render "layouts/footer" %>
+    </div>
   </body>
 </html>

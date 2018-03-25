@@ -8,6 +8,12 @@ vi:
     top_nav:
       profile: "Hồ sơ"
       log_out: "Đăng xuất"
+      logo_alt: "FU-HL logo"
+      school_name: "FPTU-Hòa Lạc"
+      courses: "Khóa học"
+      trainers: "Giảng viên"
+      language: "Ngôn ngữ"
+      setting: "Cài đặt"
     footer:
       content: "© 2017 By Framgia - Human Development Division - Education Section - Đăng ký bản quyền."
   session:

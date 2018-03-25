@@ -7,6 +7,8 @@ exclude:
   - 'vendor/assets/**'
   - 'app/assets/stylesheets/sellers/custom.scss'
   - 'app/assets/stylesheets/sellers/product.scss'
+  - 'app/assets/stylesheets/material_kit.css'
+  - 'app/assets/stylesheets/mk-custom.min.css'
 linters:
   Comment:
     exclude:
