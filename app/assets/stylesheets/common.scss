@@ -1,0 +1,23 @@
+@import 'colors';
+
+.require {
+  &::after {
+    color: $red;
+    content: ' *';
+  }
+}
+
+.v-resize {
+  resize: vertical;
+}
+
+.flash-errors {
+  .alert {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}
+
+.relative {
+  position: relative;
+}

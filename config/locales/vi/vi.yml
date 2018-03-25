@@ -23,3 +23,17 @@ vi:
     name: "Tên"
     password_confirmation: "Nhập lại mật khẩu"
     select_area: "Chọn DOM"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+  number:
+     currency:
+        format:
+          unit: 'VNĐ'
+          delimiter: ','
+          separator: '.'
+          precision: 0
+          format: '%n%u'

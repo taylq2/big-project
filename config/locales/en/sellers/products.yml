@@ -1,0 +1,8 @@
+en:
+  sellers:
+    products:
+      index:
+        title: "Products"
+        new_product: "Add new product"
+      new:
+        title: "Add new product"

@@ -24,3 +24,17 @@ en:
     password_confirmation: "Password confirmation"
     select_area: "Select area"
     forgot_password: "Forgot your password?"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+  number:
+     currency:
+        format:
+          unit: '$'
+          delimiter: ','
+          separator: '.'
+          precision: 0
+          format: '%u%n'

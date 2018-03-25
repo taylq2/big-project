@@ -12,18 +12,18 @@ ActiveRecord::Base.transaction do
   users << Manager.new(name: "Manager", password: "123456", area_id: 1,
     room: 507, email: "manager@framgia.com")
 
-  (1..7).each do |n|
-    users << Seller.new(name: "Seller #{n}", password: "123456", area_id: n,
-      room: 507, email: "seller#{n}@framgia.com")
+  Area.all.each do |area|
+    users << Seller.new(name: "Seller #{area.id}", password: "123456", area_id: area.id,
+      room: 507, email: "seller#{area.id}@framgia.com")
   end
 
-  (1..7).each do |n1|
-    (1..50).each do |n|
-      users << Buyer.new(name: "Buyer #{n}", password: "123456", area_id: n1,
-        room: n, email: "buyer#{n}@framgia.com")
-    end
+  Area.all.each do |area|
+    users << Buyer.new(name: "Buyer #{area}", password: "123456", area_id: area.id,
+      room: 507, email: "buyer#{area}@framgia.com")
   end
-  User.import! users
+  users.each do |user|
+    user.confirm
+  end
 
   puts "3. Seeding categories"
   categories = Array.new
@@ -48,4 +48,10 @@ ActiveRecord::Base.transaction do
     end
   end
   Product.import! products
+
+  Area.all.each do |area|
+    Product.all.each do |product|
+      AreaProduct.create(area_id: area.id, product_id: product.id)
+    end
+  end
 end

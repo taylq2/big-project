@@ -7,8 +7,8 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.integer :seller_id
       t.decimal :price
       t.integer :category_id
-      t.datetime :started_at
-      t.datetime :finished_at
+      t.time :started_at
+      t.time :finished_at
 
       t.timestamps
     end

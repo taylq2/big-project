@@ -1,0 +1,13 @@
+vi:
+  activerecord:
+    models:
+      product:
+        one: "Sản phẩm"
+        other: "Sản phẩm"
+    attributes:
+      product:
+        picture: "Ảnh"
+        name: "Tên"
+        price: "Giá"
+        started_at: "Thời gian bắt đầu"
+        finished_at: "Thời gian kết thúc"

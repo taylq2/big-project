@@ -34,3 +34,5 @@ config/environments/*.local.yml
 .idea/
 public/javascripts/i18n.js
 app/assets/javascripts/i18n/translations.js
+
+public/uploads
