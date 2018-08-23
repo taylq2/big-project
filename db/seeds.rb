@@ -51,7 +51,7 @@ ActiveRecord::Base.transaction do
 
   Area.all.each do |area|
     Product.all.each do |product|
-      AreaProduct.create(area_id: area.id, product_id: product.id)
+      AreasProduct.create(area_id: area.id, product_id: product.id)
     end
   end
 end

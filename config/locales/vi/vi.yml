@@ -34,11 +34,11 @@ vi:
       default: "%d/%m/%Y"
   time:
     formats:
-      default: "%d/%m/%Y %H:%M"
+      default: "%H:%M %d/%m/%y"
   number:
      currency:
         format:
-          unit: 'VNĐ'
+          unit: ' VNĐ'
           delimiter: ','
           separator: '.'
           precision: 0

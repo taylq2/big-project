@@ -1,6 +1,6 @@
-class CreateAreaProducts < ActiveRecord::Migration[5.1]
+class CreateAreasProducts < ActiveRecord::Migration[5.1]
   def change
-    create_table :area_products do |t|
+    create_table :areas_products do |t|
       t.integer :area_id
       t.integer :product_id
 
