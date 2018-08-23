@@ -23,22 +23,25 @@
             <thead>
               <tr>
                 <th class="text-right">#</th>
-                <th class="text-center" width="250">
+                <th class="text-center" width="200">
                   <%= Product.human_attribute_name :picture %>
                 </th>
                 <th class="text-center">
                     <%= Product.human_attribute_name :name %>
                 </th>
-                <th class="text-center">
+                <th class="text-center" width="57">
                     <%= Product.human_attribute_name :price %>
                 </th>
-                <th class="text-center">
+                <th class="text-center" width="85">
+                    <%= Product.human_attribute_name :area %>
+                </th>
+                <th class="text-center" width="65">
                     <%= Product.human_attribute_name :started_at %>
                 </th>
-                <th class="text-center">
+                <th class="text-center" width="65">
                   <%= Product.human_attribute_name :finished_at %>
                 </th>
-                <th class="text-center">
+                <th class="text-center" width="1">
                   <%= Product.human_attribute_name :category %>
                 </th>
               </tr>

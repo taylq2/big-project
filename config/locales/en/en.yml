@@ -35,7 +35,7 @@ en:
       default: "%d/%m/%Y"
   time:
     formats:
-      default: "%d/%m/%Y %H:%M"
+      default: "%H:%M %d/%m/%y"
   number:
      currency:
         format:

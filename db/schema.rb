@@ -12,15 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20180303220817) do
 
-  create_table "area_products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "area_id"
-    t.integer "product_id"
+  create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
+  create_table "areas_products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "area_id"
+    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -61,8 +61,8 @@ ActiveRecord::Schema.define(version: 20180303220817) do
     t.integer "seller_id"
     t.decimal "price", precision: 10
     t.integer "category_id"
-    t.time "started_at"
-    t.time "finished_at"
+    t.datetime "started_at"
+    t.datetime "finished_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

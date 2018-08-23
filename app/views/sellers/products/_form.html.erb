@@ -3,61 +3,87 @@
 
   <%= f.hidden_field :seller_id, value: current_user.id %>
 
-  <div class="avatar-upload">
-    <div class="avatar-edit">
-      <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png", id: "imageUpload" %>
-      <label for="imageUpload"></label>
-    </div>
-    <% if f.object.picture? %>
-      <%= image_tag f.object.picture.thumb.url %>
-    <% else %>
-      <div class="avatar-preview">
-        <div id="imagePreview" style="background-image: url(https://www.retailnews.asia/wp-content/uploads/2017/07/Ksubaka-Pasta.jpg);">
-        </div>
+  <div class="col-sm-6">
+    <div class="avatar-upload">
+      <div class="avatar-edit">
+        <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png", id: "imageUpload" %>
+        <label for="imageUpload"></label>
       </div>
-    <% end %>
+      <% if f.object.picture? %>
+        <%= image_tag f.object.picture.thumb.url %>
+      <% else %>
+        <div class="avatar-preview">
+          <div id="imagePreview" style="background-image: url(https://www.retailnews.asia/wp-content/uploads/2017/07/Ksubaka-Pasta.jpg);">
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 
-  <div class="form-group col-sm-12">
-    <%= f.label :name, class: "require" %>
-    <%= f.text_field :name, class: "form-control", required: true %>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <%= f.label :name, class: "require" %>
+      <%= f.text_field :name, class: "form-control", required: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :price, class: "require" %>
+      <%= f.number_field :price, class: "form-control", required: true %>
+    </div>
   </div>
 
-  <div class="form-group col-sm-12">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: "form-control" %>
-  </div>
-
-  <div class="form-group col-sm-12">
-    <%= f.label :price, class: "require" %>
-    <%= f.number_field :price, class: "form-control", required: true %>
-  </div>
-
-  <div class="form-group col-sm-12">
+  <div class="form-group col-sm-6">
     <%= f.label :category_id, class: "require" %>
     <%= f.select :category_id, categories,
       {prompt: t(".select_category")}, class: "select2", required: true %>
   </div>
 
   <div class="form-group col-sm-6">
-    <%= f.label :started_at, class: "require" %>
-    <div class="input-group date datetimepicker" id="datetimepicker1">
-      <%= f.text_field :started_at, class: "form-control input-group-addon",
-        required: true %>
-      <span class="input-group-addon">
-        <span class="glyphicon glyphicon-calendar"></span>
-      </span>
+    <%= f.label :area, class: "require" %>
+    <div class="field" data-length="<%= areas.length %>" id="length">
+      <% areas.each do |area| %>
+        <%= f.fields_for :areas_products,
+          area.area_ids_of_product(product) ||
+          product.areas_products.build do |ap| %>
+          <label class="col-sm-4">
+            <%= f.label area.name, style: "text-transform: uppercase;" %>
+          <div class="icheckbox_flat-green checked" style="position: relative;">
+            <%= ap.check_box :area_id, {id: "checkbox_check#{area.id}",
+              class: "flat", checked: true}, area.id, 0 %>
+            <%= ap.hidden_field :_destroy, id: "data-form-prepend#{area.id}" %>
+          </div>
+          </label>
+        <% end %>
+      <% end %>
     </div>
   </div>
 
-  <div class="form-group col-sm-6">
-    <%= f.label :finished_at, class: "require" %>
-    <div class="input-group date datetimepicker" id="datetimepicker2">
-      <%= f.text_field :finished_at, class: "form-control input-group-addon",
-        required: true %>
-      <span class="input-group-addon">
-        <span class="glyphicon glyphicon-calendar"></span>
-      </span>
+  <div class="col-sm-6">
+    <div class="form-group col-sm-6">
+      <%= f.label :started_at, class: "require" %>
+      <div class="input-group date datetimepicker" id="datetimepicker1">
+        <%= f.text_field :started_at, class: "form-control input-group-addon",
+          required: true %>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <%= f.label :finished_at, class: "require" %>
+      <div class="input-group date datetimepicker" id="datetimepicker2">
+        <%= f.text_field :finished_at, class: "form-control input-group-addon",
+          required: true %>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
     </div>
   </div>
 
