@@ -11,6 +11,7 @@ module Sellers
     def new
       @product = current_user.products.new
       @categories = Category.pluck :name, :id
+      @areas = Area.all
     end
 
     def create

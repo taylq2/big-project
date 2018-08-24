@@ -9,5 +9,6 @@ en:
         picture: "Picture"
         name: "Name"
         price: "Price"
+        area: "Area"
         started_at: "Start at"
         finished_at: "Finish at"

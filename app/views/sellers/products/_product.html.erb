@@ -8,6 +8,11 @@
   <td><%= link_to product.name, sellers_product_path(product) %></td>
   <td><%= number_to_currency product.price %></td>
   <td>
+    <% product.areas_products.each do |ap| %>
+      <%= Area.where(id: ap.area_id).pluck(:name) %>
+    <% end %>
+  </td>
+  <td>
     <%= l product.started_at %>
   </td>
   <td>
