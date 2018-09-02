@@ -23,13 +23,13 @@
     <div class="collapse navbar-collapse" id="navigation-index">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to "#", class: "btn" do %>
-            <i class="material-icons">dashboard</i> <%= t ".courses" %>
+          <%= link_to buyers_products_path, class: "btn" do %>
+            <i class="material-icons">dashboard</i> <%= t ".products" %>
           <% end %>
         </li>
         <li>
-          <%= link_to "#", class: "btn" do %>
-            <i class="material-icons">accessibility</i> <%= t ".trainers" %>
+          <%= link_to buyers_carts_path(@current_cart), class: "btn" do %>
+            <i class="material-icons">accessibility</i> <%= t ".carts" %>
           <% end %>
         </li>
         <li class="dropdown">
@@ -42,51 +42,35 @@
             <li><%= link_to t("application.language.vi"), locale: :vi %></li>
           </ul>
         </li>
-        <% if user_signed_in? %>
-          <li class="dropdown">
-            <%= link_to "javascript:;", class: "dropdown-toggle",
-              data: {toggle: "dropdown"}, "aria-expanded": false do %>
-              <%= image_tag "img.jpg",class: "avatar float-left" %>
-              <%= current_user.name %>
-              <i class="icon-submenu fa fa-angle-down"></i>
-            <% end %>
-            <ul class="dropdown-menu">
-              <li>
-                <%= link_to "#" do %>
-                  <i class="material-icons md-18">perm_identity</i>
-                  <%= t ".profile" %>
-                <% end %>
-              </li>
-              <li>
-                <%= link_to "#" do %>
-                  <i class="material-icons md-18">settings</i>
-                  <%= t ".setting" %>
-                <% end %>
-              </li>
-              <li class="divider"> </li>
-              <li>
-                <%= link_to destroy_user_session_path, method: :delete do %>
-                  <i class="material-icons md-18">keyboard_tab</i>
-                  <%= t "layouts.top_nav.log_out" %>
-                <% end %>
-              </li>
-            </ul>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to t("session.login"), new_user_session_path %>
-          </li>
-          <li class="dropdown">
-            <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
-              <%= t ".language" %>
-              <span class="caret"></span>
-            <% end %>
-            <ul class="dropdown-menu">
-              <li><%= link_to t("application.language.en"), locale: :en %></li>
-              <li><%= link_to t("application.language.vi"), locale: :vi %></li>
-            </ul>
-          </li>
-        <% end %>
+        <li class="dropdown">
+          <%= link_to "javascript:;", class: "dropdown-toggle",
+            data: {toggle: "dropdown"}, "aria-expanded": false do %>
+            <%= image_tag "img.jpg",class: "avatar float-left" %>
+            <%= current_user.name %>
+            <i class="icon-submenu fa fa-angle-down"></i>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to "#" do %>
+                <i class="material-icons md-18">perm_identity</i>
+                <%= t ".profile" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <i class="material-icons md-18">settings</i>
+                <%= t ".setting" %>
+              <% end %>
+            </li>
+            <li class="divider"> </li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="material-icons md-18">keyboard_tab</i>
+                <%= t "layouts.top_nav.log_out" %>
+              <% end %>
+            </li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>

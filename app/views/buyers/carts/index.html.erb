@@ -1,0 +1,24 @@
+<ul>
+  <% @carts.order_details.each do |order_detail| %>
+    <li><%= t "name" %><%= order_detail.product.name %></li>
+    <li>
+      <%= t "price" %>
+      <%= number_to_currency(order_detail.product.price) %></li>
+    <li><%= t "quantity" %><%= order_detail.quantity %></li>
+    <li>
+      <%= t "total_price" %>
+      <%= number_to_currency(order_detail.total_price) %></li>
+    <ul>
+      <li>
+
+      </li>
+      <li>
+
+      </li>
+    </ul>
+  <% end %>
+</ul>
+<h3><%= t "sub_price" %><%= number_to_currency(@carts.sub_total) %></h3>
+<%= link_to t("checkout"), new_buyers_order_path %><br>
+<%= link_to t("cancel"), buyers_cart_path(current_cart),method: :delete,
+  data: {confirm: t("confirm")} %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303220817) do
+ActiveRecord::Schema.define(version: 20180825205206) do
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20180303220817) do
   end
 
   create_table "carts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
+    t.integer "buyer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,15 +41,20 @@ ActiveRecord::Schema.define(version: 20180303220817) do
     t.integer "order_id"
     t.integer "product_id"
     t.integer "cart_id"
-    t.integer "quantity"
+    t.integer "quantity", default: 1
     t.integer "status"
     t.integer "seller_id"
+    t.integer "cart_order_id"
+    t.string "cart_order_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_order_details_on_deleted_at"
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "user_id"
+    t.integer "buyer_id"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -65,6 +70,8 @@ ActiveRecord::Schema.define(version: 20180303220817) do
     t.datetime "finished_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_products_on_deleted_at"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

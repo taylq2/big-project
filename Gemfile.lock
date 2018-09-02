@@ -260,6 +260,8 @@ GEM
       shellany (~> 0.0)
     orm_adapter (0.5.0)
     parallel (1.12.1)
+    paranoia (2.4.1)
+      activerecord (>= 4.0, < 5.3)
     parser (2.5.0.5)
       ast (~> 2.4.0)
     pnotify-rails (3.0.0)
@@ -467,6 +469,7 @@ DEPENDENCIES
   mini_magick
   momentjs-rails
   mysql2 (>= 0.3.18, < 0.5)
+  paranoia (~> 2.2)
   pnotify-rails
   pry
   puma (~> 3.7)
@@ -496,4 +499,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.1
+   1.16.4

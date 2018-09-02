@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
+  include SessionsHelper
+
   protect_from_forgery with: :exception
 
-  before_action :set_locale
+  before_action :set_locale, :authenticate_user!
 
   class << self
     def default_url_options

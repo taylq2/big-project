@@ -10,8 +10,8 @@ en:
       log_out: "Log out"
       logo_alt: "FU-HL logo"
       school_name: "FPTU-HL"
-      courses: "Courses"
-      trainers: "Trainers"
+      products: "Products"
+      carts: "Carts"
       language: "Language"
       setting: "Settings"
     footer:

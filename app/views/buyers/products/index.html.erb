@@ -1,0 +1,21 @@
+<% @products.each do |product| %>
+  <div class="col-sm-3">
+      <tr>
+        <td><%= image_tag product.picture.url if product.picture? %></td>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td>
+          <% product.areas.each do |area| %>
+            <%= area.name %>
+          <% end %>
+        </td>
+        <td><%= product.started_at.strftime("%I:%M %p %d %b.") %></td>
+        <td><%= product.finished_at.strftime("%I:%M %p %d %b.") %></td>
+        <td>
+            <%= link_to t("buy"), buyers_product_order_details_path(product),
+              method: :post, class: "btn btn-info" %>
+        </td>
+      </tr>
+      </div>
+    <% end %>

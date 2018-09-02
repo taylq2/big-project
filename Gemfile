@@ -33,6 +33,7 @@ gem "select2-rails"
 gem "mini_magick"
 gem "material_icons"
 gem "material_kit", "~> 1.0", ">= 1.0.0.2"
+gem "paranoia", "~> 2.2"
 
 group :development, :test do
   gem "rspec"

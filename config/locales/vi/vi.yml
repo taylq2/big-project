@@ -10,8 +10,8 @@ vi:
       log_out: "Đăng xuất"
       logo_alt: "FU-HL logo"
       school_name: "FPTU-Hòa Lạc"
-      courses: "Khóa học"
-      trainers: "Giảng viên"
+      products: "Sản phẩm"
+      carts: "Giỏ hàng"
       language: "Ngôn ngữ"
       setting: "Cài đặt"
     footer:
